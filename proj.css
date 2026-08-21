@@ -1,0 +1,33 @@
+
+#main{
+    height: 400px;
+    width: 500px;
+    background-color: rgb(3, 8, 8);
+    text-align: center;
+    color:goldenrod;
+    border-radius: 8px;
+    padding: 7px;
+    margin: auto;
+}
+#date{
+    width:150px;
+}
+
+#btn{
+    background-color: #7241a0;
+    display: block;
+    width: 8rem;
+    margin: auto;
+    margin-top: 6px;
+    border-radius: 8px;
+
+}
+#bt{
+    background-color: #7241a0;
+    display: block;
+    width: 8rem;
+    margin: auto;
+    margin-top: 6px;
+    border-radius: 8px;
+
+}
