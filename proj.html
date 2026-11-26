@@ -7,18 +7,42 @@
     <link rel="stylesheet" href="proj.css">
 </head>
 <body>
-  <div id="main">
-    <h1>Age Calculator</h1>
-    <p>Enter your date of birth:</p>
-    <input type="date" id="date" >
+    <div class="ambient-bg" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+    </div>
 
-    <button  id="btn"   onclick="calculateAge()">Calculate Age</button>
-    <button id="bt" onclick="changeColor()">CHANGE Background Color</button>
-    <p id="result"></p>
-  </div>
-    
+    <main id="main" class="card" data-theme="midnight">
+        <div class="card-header">
+            <span class="badge">Time &amp; Milestones</span>
+            <h1>Age Calculator</h1>
+            <p class="subtitle">Discover your exact age, birth weekday, and next birthday countdown.</p>
+        </div>
 
+        <form id="age-form" class="input-section" novalidate>
+            <label for="date" class="input-label">Enter your date of birth</label>
+            <div class="date-wrapper" id="date-wrapper">
+                <input type="date" id="date" required>
+            </div>
+            <p id="error-msg" class="error-msg" role="alert" aria-live="polite"></p>
 
+            <div class="actions">
+                <button type="submit" id="btn">
+                    <span class="btn-label">Calculate Age</span>
+                    <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+                <button type="button" id="bt" onclick="changeColor()">
+                    <span class="swatch" id="theme-swatch" aria-hidden="true"></span>
+                    <span>Change Theme</span>
+                </button>
+            </div>
+        </form>
+
+        <section id="result" class="result-panel" aria-live="polite" hidden></section>
+    </main>
+
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
 
     <script src="proj.js"></script>
 </body>
